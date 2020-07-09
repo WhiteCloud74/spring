@@ -1,0 +1,11 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    hostname: rebbitmq
+    restart: always
+    ports:
+      - 15672:15672
+      - 5672:5672
+    volumes:
+      - ~/rabbit:/var/lib/rabbitmq
